@@ -30,7 +30,11 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+The Document Object Model is a way for us to physically see the html of a project. 
+
 2. What is an event?
+
+An event
 
 3. What is an event listener?
 
