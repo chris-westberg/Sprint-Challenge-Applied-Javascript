@@ -28,15 +28,25 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead.
 
-1. What is the DOM?
+<!-- 1. What is the DOM? -->
 
-2. What is an event?
+The Document Object Model is a way for us to physically see the html of a project. 
 
-3. What is an event listener?
+<!-- 2. What is an event? -->
 
-4. Why would we convert a NodeList into an Array?
+An event is any action that happens on a web page (i.e. click, mouse down, scroll, etc)
 
-5. What is a component?
+<!-- 3. What is an event listener? -->
+
+An event listener is a line of code that we give to any given element on our code to tell it how it should react when an event occurs. 
+
+<!-- 4. Why would we convert a NodeList into an Array? -->
+
+To make it easier to iterate through. 
+
+<!-- 5. What is a component? -->
+
+A component is a reusable element in our code, made up of HTML, CSS, and JS. 
 
 ### Git Set up
 
@@ -49,13 +59,13 @@ Edit this document to include your answers after each question. Make sure to lea
 
 Your finished project must include all of the following requirements:
 
-* [ ] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled in. DO NOT add any code to the HTML file itself.
+* [√] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled in. DO NOT add any code to the HTML file itself.
 
-* [ ] Following the instructions in the `Header/index.js` file, create the Header component.
+* [√] Following the instructions in the `Header/index.js` file, create the Header component.
 
-* [ ] Following the instructions in the `Tabs/index.js` file, create individual Tabs components.
+* [√] Following the instructions in the `Tabs/index.js` file, create individual Tabs components.
 
-* [ ] Following the instructions in the `Cards/index.js` file, create individual Cards components.
+* [√] Following the instructions in the `Cards/index.js` file, create individual Cards components.
 
 ## Stretch Problems
 
