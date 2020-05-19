@@ -9,9 +9,13 @@
 //    <div class="tab">topic here</div>
 axios.get('https://lambda-times-backend.herokuapp.com/topics')
 .then(response => {
-    console.log(response.data)
+    console.log(response.data.topics)
     const topics = document.querySelector('.topics')
-    topics.appendChild(tabMaker(response.data))
+    // topics.appendChild(tabMaker(response.data))
+    const newVar = response.data.topics
+    newVar.forEach(item => {
+        topics.appendChild(tabMaker(item))
+    })
 })
 .catch(err => {
     console.log(err)
@@ -21,7 +25,7 @@ function tabMaker(object) {
     //---tab div---
     const tabDiv = document.createElement('div')
     tabDiv.classList.add('tab')
-    tabDiv.textContent = (object.topics[0])
+    tabDiv.textContent = object
 
     return tabDiv
 }

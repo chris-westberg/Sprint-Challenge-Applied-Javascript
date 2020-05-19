@@ -22,9 +22,15 @@
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
 .then(response => {
-    console.log(response.data)
+    console.log(response.data.articles)
     const cardsContainer = document.querySelector('.cards-container')
-    cardsContainer.appendChild(cardsMaker(response.data))
+    const array = Object.values(response.data.articles)
+    array.forEach((element) => {
+        element.forEach((article) => {
+            cardsContainer.appendChild(cardsMaker(article))
+        })
+    })
+
 
 })
 .catch(err => {
@@ -39,14 +45,13 @@ function cardsMaker(object) {
     //------Headline Div--------
     const headline = document.createElement('div')
     headline.classList.add('headline')
-    headline.textContent = object.articles.bootstrap[0].headline
-    console.log(headline)
+    headline.textContent = object.headline
     card.appendChild(headline)
 
     //------Author Div----------
     const author = document.createElement('div')
     author.classList.add('author')
-    // author.textContent = 
+    author.textContent = `By: ${object.authorName}`
     card.appendChild(author)
 
     //------image div-----------
@@ -56,12 +61,12 @@ function cardsMaker(object) {
 
     //------image---------------
     const imgTag = document.createElement('img')
-    // imgTag.setAttribute('src', )
+    imgTag.setAttribute('src', object.authorPhoto)
     imgContainer.appendChild(imgTag)
 
     //------Author Span---------
     const authorSpan = document.createElement('span')
-    // authorSpan.textContent = `By ${}`
+    authorSpan.textContent = `By ${object.authorName}`
 
     return card
 }
